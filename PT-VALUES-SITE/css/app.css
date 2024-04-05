@@ -1,0 +1,232 @@
+/* Main */
+.card-layout {
+    display: grid;
+    gap: 2rem;
+    place-content: center;
+    margin: 0 0 1em 0;
+}
+
+@media (min-width:550px) {
+    .card-layout {
+        grid-template-columns: repeat(1, 167.6px);
+    }
+    .type-legend {
+        grid-column: span 1;
+    }
+}
+
+@media (min-width:650px) {
+    .card-layout {
+        grid-template-columns: repeat(2, 167.6px);
+    }
+    .type-legend {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width:1099px) {
+    .newest-collectible {
+        display: none;
+        visibility: collapse;
+        height: 0;
+        position: absolute;
+    }
+}
+
+@media (min-width:1100px) {
+    .card-layout {
+        grid-template-columns: repeat(4, 167.6px);
+    }
+    .newest-collectible {
+        grid-column: span 4;
+        grid-template-columns: 2fr 3fr;
+    }
+    .type-legend {
+        grid-column: span 4;
+    }
+}
+
+@media (min-width:1450px) {
+    .card-layout {
+        grid-template-columns: repeat(6, 167.6px);
+    }
+    .newest-collectible {
+        grid-column: span 6;
+        grid-template-columns: 1fr 3fr;
+    }
+    .type-legend {
+        grid-column: span 6;
+    }
+}
+
+.newest-collectible {
+    display: grid;
+
+    background: url(../icons/hat-headline.png);
+    padding: 1em;
+
+    border-radius: 15px;
+}
+
+.headline-item {
+    background-color: #00000060;
+    box-shadow: 0 4px 6px 0 #00000060,
+                0 4px 9px 4px #00000060;
+
+    max-width: 250px;
+    padding: .5em;
+
+    border-radius: 15px;
+}
+
+.headline-content {
+    background: linear-gradient(to right, transparent, var(--normal-background-color));
+    margin: -1em -1em -1em 0;
+}
+
+.headline-fix {
+    margin-top: 1em;
+}
+
+.headline-content h2, .headline-content h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.headline-item-name {
+    padding-bottom: .2em;
+}
+
+.darken {
+    color: var(--darkened-text-color);
+}
+
+.darken-less {
+    color: var(--slightly-darkened-text-color);
+}
+
+.lighter {
+    font-weight: lighter;
+}
+
+.no-decoration-item-text {
+    display: block;
+
+    color: var(--text-color);
+    text-decoration: none;
+
+    font-size: 11pt;
+
+    width: 150px;
+    
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.card {
+    display: block;
+
+    background-color: var(--card-bg);
+
+    margin: 0;
+    padding: .25em .45em .45em;
+
+    border-radius: 15px;
+}
+
+.item-card {
+    display: block;
+
+    background-color: var(--asset-bg);
+    border: 2px var(--border-color) solid;
+
+    max-width: 150px;
+    padding: .5em;
+
+    border-radius: 15px;
+}
+
+.hat-type {
+    border: 2px var(--hat-type-border) solid;
+}
+
+.hat-type:hover {
+    box-shadow: 0 1px 2px 0 var(--hat-type-shadow),
+                0 2px 6px 2px var(--hat-type-shadow);
+}
+
+.tool-type {
+    border: 2px var(--tool-type-border) solid;
+}
+
+.tool-type:hover {
+    box-shadow: 0 1px 2px 0 var(--tool-type-shadow),
+                0 2px 6px 2px var(--tool-type-shadow);
+}
+
+.face-type {
+    border: 2px var(--face-type-border) solid;
+}
+
+.face-type:hover {
+    box-shadow: 0 1px 2px 0 var(--face-type-shadow),
+                0 2px 6px 2px var(--face-type-shadow);
+}
+
+/* Type Legend */
+.type-legend {
+    background-color: var(--card-bg);
+    box-shadow: 0 1px 2px 0 var(--regular-shadow), 0 2px 6px 2px var(--regular-shadow);
+    border-radius: 15px;
+
+    display: grid;
+
+    width: fit-content;
+    padding: 1em;
+    margin: 0 0 1em 0;
+}
+
+.type-legend span {
+    font-size: 18pt;
+}
+
+.type-legend ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5em;
+}
+
+.type-legend ul li img {
+    max-width: 15px;
+    margin-right: 0.5em;
+}
+
+.type-legend ul li span {
+    margin: .5em;
+    font-size: 14pt;
+}
+
+/* Headline Animation */
+
+.newest-collectible {
+    animation: bg-scroll 6.5s linear infinite;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-play-state: running;
+
+    animation-name: banner-scroll;
+}
+
+@keyframes banner-scroll {
+    0% {
+        background-position: 800px 400px;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}

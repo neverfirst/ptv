@@ -1,0 +1,71 @@
+/* Main */
+main {
+    margin: 1.5em 2em;
+    font-size: 17pt;
+}
+
+.item-name, .item-name a {
+    margin-top: 0;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.item-info-container {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr 4fr 4fr;
+    grid-template-areas: "asset-image empty value-avg-demand price-type-acronym";
+
+    background-color: var(--card-bg);
+
+    box-shadow: 0 1px 2px 0 var(--regular-shadow),
+                0 2px 6px 2px var(--regular-shadow);
+
+    border-radius: 15px;
+}
+
+.item-image-container {
+    padding: 3em 0 3em 3em; 
+}
+
+.item-image {
+    grid-area: asset-image;
+
+    display: block;
+
+    background-color: var(--asset-bg);
+    border: 2px var(--border-color) solid;
+    
+    max-width: 250px;
+    padding: .5em;
+
+    border-radius: 15px;
+}
+
+.trading-column {
+    grid-area: value-avg-demand;
+
+    display: flex;
+
+    border-left: 2px var(--border-color) solid;
+    
+    padding-left: 2em;
+}
+
+#table-width {
+    margin: 1em 5%;
+    width: 90%;
+}
+
+.set-text-left {
+    text-align: left;
+}
+
+.set-text-right {
+    text-align: right;
+}
+
+.info-column {
+    grid-area: price-type-acronym;
+
+    display: flex;
+}

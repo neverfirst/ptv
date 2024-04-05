@@ -1,0 +1,49 @@
+main {
+  background-image: url("../img/caution.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+section {
+    margin: 5% 5%;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    
+    background-color: #1e1e1e90;
+    box-shadow: 0 1px 2px 0 var(--regular-shadow), 0 2px 6px 2px var(--regular-shadow);
+    border-radius: 15px;
+}
+
+img {
+    max-width: 400px;
+    margin: auto;
+}
+
+.align {
+    margin: auto;
+    max-width: 50%;
+}
+
+.error-code {
+    font-size: 70pt;
+    margin: 0;
+}
+
+.request {
+    font-size: 20pt;
+}
+
+.previous {
+    font-size: 16pt;
+    background: transparent;
+    border: transparent;
+    color: #fff;
+    text-decoration: underline;
+}
