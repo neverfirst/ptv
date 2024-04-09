@@ -1,0 +1,41 @@
+/* Main */
+h1 {
+    padding-left: 1.5em;
+    margin-bottom: 0;
+}
+
+.separation {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+
+    gap: 1em;
+    padding: 1em 3em;
+}
+
+@media (max-width:810px) {
+    .separation {
+        grid-template-rows: auto;
+    }
+}
+
+.contributor-separator {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+
+    border-top: 2px var(--border-color) solid;
+    padding-top: 1em;
+}
+
+.picture-handler {
+    max-width: 200px;
+    padding-right: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+h2 {
+    margin: 0 0 1em 0;
+}
